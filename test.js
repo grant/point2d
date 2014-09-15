@@ -35,6 +35,22 @@ describe('point', function () {
     });
   });
 
+  describe('manhattanDistance', function() {
+    it('should work', function () {
+      assert.equal(new Point(-3, -4).manhattanDistance(new Point(3, 4)), 14);
+    });
+  });
+
+  describe('abs', function() {
+    it('should work with positive coordinates', function () {
+      assert(new Point(1, 2).abs().equals(new Point(1, 2)));
+    });
+
+    it('shoudl work with negative coordinates', function () {
+      assert(new Point(-1, -2).abs().equals(new Point(1, 2)));
+    });
+  });
+
   describe('equals', function () {
     it('should equal itself', function () {
       assert(new Point().equals(new Point()));

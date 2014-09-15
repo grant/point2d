@@ -1,6 +1,6 @@
 
 /**
- * A point in 2d space
+ * An immutable point in 2d space
  * @param {Number} x The x coordinate
  * @param {Number} y The y coordinate
  */
@@ -17,6 +17,24 @@ function Point (x, y) {
  */
 Point.prototype.distance = function (point) {
   return Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2));
+};
+
+/**
+ * Returns the Manhattan distance between this point and another point
+ * @param {Point} point The other point
+ * @returns {Number} The Manhattan distance
+ */
+Point.prototype.manhattanDistance = function (point) {
+  var scalePoint = this.sub(point).abs();
+  return scalePoint.x + scalePoint.y;
+};
+
+/**
+ * Returns a new point with coordinates in absolute value
+ * @returns {Point} The new point
+ */
+Point.prototype.abs = function () {
+  return new Point(Math.abs(this.x), Math.abs(this.y));
 };
 
 /**
