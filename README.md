@@ -13,7 +13,7 @@ var Point = require('point2d');
 
 var point1 = new Point(1, 2);
 console.log(point1.x); // 1
-console.log(point1.y); // 1
+console.log(point1.y); // 2
 
 var point2 = new Point(); // (0, 0)
 
