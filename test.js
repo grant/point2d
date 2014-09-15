@@ -37,11 +37,11 @@ describe('point', function () {
 
   describe('equals', function () {
     it('should equal itself', function () {
-      assert.equal(new Point().equals(new Point()));
+      assert(new Point().equals(new Point()));
     });
 
     it('should not equal other points', function () {
-      assert.notEqual(new Point().equals(new Point(1, 2)));
+      assert(!new Point().equals(new Point(1, 2)));
     });
   });
 

@@ -25,7 +25,7 @@ Point.prototype.distance = function (point) {
  * @returns {Boolean} If the points equal
  */
 Point.prototype.equals = function (point) {
-  return this.x === point.x && this.y == point.y;
+  return this.x === point.x && this.y === point.y;
 };
 
 /**
